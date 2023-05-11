@@ -1,13 +1,13 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { WatchConnectivityPlugin } from './definitions';
+import type { IonicWatchConnectivityPlugin } from './definitions';
 
-const WatchConnectivity = registerPlugin<WatchConnectivityPlugin>(
-  'WatchConnectivity',
+const IonicWatchConnectivity = registerPlugin<IonicWatchConnectivityPlugin>(
+  'IonicWatchConnectivity',
   {
-    web: () => import('./web').then(m => new m.WatchConnectivityWeb()),
+    web: () => import('./web').then(m => new m.IonicWatchConnectivityWeb()),
   },
 );
 
 export * from './definitions';
-export { WatchConnectivity };
+export { IonicWatchConnectivity };

@@ -1,7 +1,7 @@
 {
-  "name": "@pdutt111/watch-connectivity",
-  "version": "0.0.4",
-  "description": "Adds watch connectovity to ionic",
+  "name": "watch-connectivity",
+  "version": "0.0.5",
+  "description": "watch connectivity for ionic",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -11,16 +11,16 @@
     "android/build.gradle",
     "dist/",
     "ios/Plugin/",
-    "Pdutt111WatchConnectivity.podspec"
+    "IonicWatchConnectivity.podspec"
   ],
-  "author": "Pariskshit Dutt",
+  "author": "pariskshit dut",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pdutt111/watch-connectivity.git"
+    "url": "git+https://github.com:pdutt111/watch-connectivity.git"
   },
   "bugs": {
-    "url": "https://github.com/pdutt111/watch-connectivity/issues"
+    "url": "https://github.com:pdutt111/watch-connectivity/issues"
   },
   "keywords": [
     "capacitor",
@@ -37,7 +37,7 @@
     "eslint": "eslint . --ext ts",
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
     "swiftlint": "node-swiftlint",
-    "docgen": "docgen --api WatchConnectivityPlugin --output-readme README.md --output-json dist/docs.json",
+    "docgen": "docgen --api IonicWatchConnectivityPlugin --output-readme README.md --output-json dist/docs.json",
     "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
@@ -70,9 +70,9 @@
   "capacitor": {
     "ios": {
       "src": "ios"
+    },
+    "android": {
+      "src": "android"
     }
-  },
-  "dependencies": {
-    "@pdutt111/watch-connectivity": "^0.0.1"
   }
 }

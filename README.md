@@ -1,6 +1,6 @@
 # watch-connectivity
 
-Adds watch connectovity to ionic
+watch connectivity for ionic
 
 ## Install
 

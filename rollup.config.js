@@ -4,7 +4,7 @@ export default {
     {
       file: 'dist/plugin.js',
       format: 'iife',
-      name: 'capacitorWatchConnectivity',
+      name: 'capacitorIonicWatchConnectivity',
       globals: {
         '@capacitor/core': 'capacitorExports',
       },

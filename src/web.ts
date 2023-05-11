@@ -1,10 +1,10 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { WatchConnectivityPlugin } from './definitions';
+import type { IonicWatchConnectivityPlugin } from './definitions';
 
-export class WatchConnectivityWeb
+export class IonicWatchConnectivityWeb
   extends WebPlugin
-  implements WatchConnectivityPlugin
+  implements IonicWatchConnectivityPlugin
 {
   async echo(options: { value: string }): Promise<{ value: string }> {
     console.log('ECHO', options);
