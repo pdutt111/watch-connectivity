@@ -6,20 +6,20 @@ import WatchConnectivity
  * Please read the Capacitor iOS Plugin Development Guide
  * here: https://capacitorjs.com/docs/plugins/ios
  */
-@objc(WatchConnectivityPlugin)
-public class WatchConnectivityPlugin: CAPPlugin, WCSessionDelegate {
+@objc(Pdutt111WatchConnectivityPlugin)
+public class Pdutt111WatchConnectivityPlugin: CAPPlugin, WCSessionDelegate {
     public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        
+
     }
-    
+
     public func sessionDidBecomeInactive(_ session: WCSession) {
         print("session inactive")
     }
-    
+
     public func sessionDidDeactivate(_ session: WCSession) {
         print("session deactivated")
     }
-    
+
 
     @objc func echo(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""

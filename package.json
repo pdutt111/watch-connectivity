@@ -1,6 +1,6 @@
 {
   "name": "@pdutt111/watch-connectivity",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Adds watch connectovity to ionic",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
