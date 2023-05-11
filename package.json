@@ -1,5 +1,5 @@
 {
-  "name": "watch-connectivity",
+  "name": "@pdutt111/watch-connectivity",
   "version": "0.0.1",
   "description": "Adds watch connectovity to ionic",
   "main": "dist/plugin.cjs.js",
@@ -11,16 +11,16 @@
     "android/build.gradle",
     "dist/",
     "ios/Plugin/",
-    "WatchConnectivity.podspec"
+    "Pdutt111WatchConnectivity.podspec"
   ],
   "author": "Pariskshit Dutt",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pdutt111/WatchConnectivity.git"
+    "url": "git+https://github.com/pdutt111/watch-connectivity.git"
   },
   "bugs": {
-    "url": "https://github.com/pdutt111/WatchConnectivity/issues"
+    "url": "https://github.com/pdutt111/watch-connectivity/issues"
   },
   "keywords": [
     "capacitor",
@@ -70,9 +70,9 @@
   "capacitor": {
     "ios": {
       "src": "ios"
-    },
-    "android": {
-      "src": "android"
     }
+  },
+  "dependencies": {
+    "@pdutt111/watch-connectivity": "^0.0.1"
   }
 }

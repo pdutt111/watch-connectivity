@@ -7,7 +7,19 @@ import WatchConnectivity
  * here: https://capacitorjs.com/docs/plugins/ios
  */
 @objc(WatchConnectivityPlugin)
-public class WatchConnectivityPlugin: CAPPlugin {
+public class WatchConnectivityPlugin: CAPPlugin, WCSessionDelegate {
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    public func sessionDidBecomeInactive(_ session: WCSession) {
+        print("session inactive")
+    }
+    
+    public func sessionDidDeactivate(_ session: WCSession) {
+        print("session deactivated")
+    }
+    
 
     @objc func echo(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""
@@ -17,6 +29,11 @@ public class WatchConnectivityPlugin: CAPPlugin {
         ])
     }
     func sendMessageToWatch(msg:String){
+        if (WCSession.isSupported()) {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
         if (WCSession.default.isReachable) {
             let message = ["Message": msg]
             WCSession.default.sendMessage(message, replyHandler: nil)
