@@ -1,5 +1,6 @@
 import Foundation
 import Capacitor
+import WatchConnectivity
 
 /**
  * Please read the Capacitor iOS Plugin Development Guide
@@ -7,12 +8,18 @@ import Capacitor
  */
 @objc(WatchConnectivityPlugin)
 public class WatchConnectivityPlugin: CAPPlugin {
-    private let implementation = WatchConnectivity()
 
     @objc func echo(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""
+        sendMessageToWatch(msg: value)
         call.resolve([
-            "value": implementation.echo(value)
+            "value": "test"
         ])
+    }
+    func sendMessageToWatch(msg:String){
+        if (WCSession.default.isReachable) {
+            let message = ["Message": msg]
+            WCSession.default.sendMessage(message, replyHandler: nil)
+        }
     }
 }
